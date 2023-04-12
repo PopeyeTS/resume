@@ -1,0 +1,79 @@
+<div>
+  <main>
+
+    <section>
+      <h1><b>{{name}}</b></h1>
+      <h2>{{description}}</h2>
+      <hr>
+    </section>
+
+    <section>
+      founder: {{history.founder}}<br>
+      foundied in: {{history.year}}
+      <hr>
+    </section>
+
+    <section>
+      <button type="button" class="btn btn-primary"><b>Some types:</b></button><br>
+      <ul>
+        {{#each types}}
+        <li>{{this}}</li>
+        {{/each}}
+      </ul>
+
+    </section>
+
+    <section>
+      <button type="button" class="btn btn-secondary">Syntax:</button><br>
+
+      <ul>
+        {{#each syntax}}
+        <li>
+          {{this}}
+        </li>
+        {{/each}}
+      </ul>
+    </section>
+
+    <section>
+      <button type="button" class="btn btn-success">Features:</button><br>
+
+      <ul>
+        {{#each features}}
+        <li>{{this}}</li>
+        {{/each}}
+      </ul>
+    </section>
+
+    <section>
+      <button type="button" class="btn btn-danger">libraries:</button><br>
+
+      <ul>
+        {{#each libraries}}
+        <li>{{this}}</li>
+        {{/each}}
+      </ul>
+    </section>
+
+    <section>
+      <button type="button" class="btn btn-warning">tools:</button><br>
+
+      <ul>
+        {{#each tools}}
+        <li>{{this}}</li>
+        {{/each}}
+      </ul>
+    </section>
+
+    <section>
+      <button type="button" class="btn btn-info">community:</button><br>
+
+      <ul>
+        {{#each community}}
+        <li>{{name}} ({{type}})</li>
+        {{/each}}
+      </ul>
+    </section>
+
+  </main>
+</div>
