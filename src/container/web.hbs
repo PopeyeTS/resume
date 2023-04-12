@@ -1,0 +1,79 @@
+<div>
+    <main>
+
+        <section>
+            {{#with web}}
+            <h1>Most popular LANG:</h1>
+            <hr>
+            <ul>
+                {{#each languages}}
+                <div>
+                    <li>
+                        {{name}}<br>
+                        Version: {{version}}<br>
+                        Description: {{description}}
+                        <ul>
+                            {{#each elements}}
+                            <li>
+                                <p>
+                                    Name of element: {{name}}<br>
+                                    Description: {{description}}<br>
+                                <ul>
+                                    {{#each attributes}}
+                                    <li>
+                                        {{name}} ({{description}})
+                                    </li>
+                                    {{/each}}
+                                </ul>
+                                </p>
+                            </li>
+                            {{/each}}
+
+                            {{#each properties}}
+                            <li>
+                                <p>
+                                    Name of properti: {{name}}<br>
+                                    Description: {{description}}<br>
+                                <ul>
+                                    {{#each values}}
+                                    <li>
+                                        {{value}} ({{description}})
+                                    </li>
+                                    {{/each}}
+                                </ul>
+                                </p>
+                            </li>
+                            {{/each}}
+
+                            {{#each functions}}
+                            <li>
+                                <p>
+                                    Name of properti: {{name}}<br>
+                                    Description: {{description}}<br>
+                                <ul>
+                                    {{#each parameters}}
+                                    <li>
+                                        Name of parameter: {{name}}<br>
+                                        Type of parameter: {{type}}<br>
+                                        Description of param: {{description}}<br>
+                                    </li>
+                                    {{/each}}
+                                </ul>
+                                </p>
+                            </li>
+                            {{/each}}
+
+
+                        </ul>
+                        <hr>
+
+                    </li>
+                </div>
+                {{/each}}
+            </ul>
+            {{/with}}
+
+        </section>
+
+    </main>
+</div>
