@@ -1,0 +1,112 @@
+<div>
+    <main>
+        {{#with program.excursion}}
+        <section>
+            <div>
+                <h1>{{name}}</h1>
+                <hr />
+            </div>
+
+            <div>
+                <p>
+                    {{#each location}}
+                    {{this}}<br />
+                    {{/each}}
+                    {{date}}<br />
+                    <hr />
+                </p>
+            </div>
+
+            <div>
+                <h2>Program of tour:</h2>
+                <ul>
+                    {{#each program}}
+                    <li>
+                        <div>
+                            <p>
+                                {{name}}({{type}}){{duration}}hours<br />
+
+                                {{#with details}}
+                                {{#with museum}}
+                                {{name}}
+                            <address>
+                                Location:
+                                {{location.address}},
+                                {{location.city}},
+                                {{location.country}}
+                            </address>
+
+                            <p>
+                            <ul>
+                                {{#each exhibits}}
+                                <p>
+                                    <li>
+                                        Name:
+                                        {{#if name}}{{name}}
+                                        {{else}}no information{{/if}}<br />
+                                        Artist:
+                                        {{#if artist}}{{artist}}
+                                        {{else}}no information{{/if}}<br />
+                                        Description:
+                                        {{#if description}} {{description}}
+                                        {{else}}no information{{/if}}<br />
+                                        Audio guide:
+                                        {{#if audio_guide}}UK, PL,UA, DE, FR
+                                        {{else}}no information{{/if}}<br />
+                                    </li>
+                                </p>
+                                {{/each}}
+
+                            </ul>
+                            </p>
+
+                            {{/with}}
+
+                            {{#with guide}}
+                            <b>Guider:</b><br />
+                            Name:{{name}}<br />
+                            language:{{language}}<br />
+                            rating:{{rating}}<br />
+                            {{/with}}
+                            {{/with}}
+
+                            {{#with details2.venue}}
+                            {{name}}
+                            <address>
+                                {{location.address}},
+                                {{location.city}},
+                                {{location.country}}
+                            </address>
+                            <br />
+                            {{/with}}
+
+                            <ul>
+                                {{#each details2.performers}}
+                                <li>
+                                    {{name}}({{type}})<br />
+                                </li>
+                                {{/each}}
+                            </ul>
+
+                            </p>
+                            <p>
+
+                                {{#with details2.guide}}
+                                <b>Guider:</b><br />
+                                Name:{{name}}<br />
+                                language:{{language}}<br />
+                                rating:{{rating}}<br />
+                                {{/with}}
+                            </p>
+                        </div>
+                    </li>
+
+                    {{/each}}
+                </ul>
+
+            </div>
+
+        </section>
+        {{/with}}
+    </main>
+</div>
