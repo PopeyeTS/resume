@@ -1,0 +1,85 @@
+<div>
+  <main>
+
+    <section>
+      <h1>Facebook Users</h1>
+    </section>
+
+    <section>
+      {{#each users}}
+      <ul>
+        <li>
+          {{name}}
+          (id:{{id}})<br />
+          {{gender}}<br />
+          {{age}}
+          years<br />
+
+          <b>Best friends:</b>
+          {{#each friends}}
+          <ul>
+            <li>
+              {{name}}
+              (id.{{id}})
+              {{gender}}<br />
+              {{age}}
+              years<br />
+              <u>mutual_friends:</u>
+              {{#each mutual_friends}}
+              <ul>
+                <li>
+                  {{name}}
+                  (id.{{id}})<br />
+                  {{gender}}<br />
+                  {{age}} years<br />
+                </li>
+              </ul>
+              {{/each}}
+              <b>Other groups:</b>
+              {{#each groups}}
+              <ul>
+                <li>
+                  {{name}} (id:{{id}})<br>
+                  {{description}}<br>
+                  <u>Some more friends from groupe:</u>
+                  {{#each members}}
+                  <ul>
+                    <li>
+                      {{name}} (id:{{id}})<br>
+                      {{gender}}, {{age}}years<br>
+                    </li>
+                  </ul>
+
+                  {{/each}}
+                </li>
+              </ul>
+              {{/each}}
+            </li>
+          </ul>
+          {{/each}}
+        </li>
+      </ul>
+
+      <h4>Member of Group:</h4>
+      {{#each groups}}
+      <ul>
+        <li>
+          {{name}} (id:{{id}})<br>
+          {{description}}<br>
+          <u>Otner members:</u>
+          {{#each members}}
+          <ul>
+            <li>
+              {{name}} (id:{{id}})<br>
+              {{gender}}, {{age}} years<br>
+            </li>
+          </ul>
+          {{/each}}
+        </li>
+      </ul>
+      {{/each}}
+      <hr />
+      {{/each}}
+    </section>
+  </main>
+</div>
