@@ -1,0 +1,75 @@
+<div>
+  <main>
+
+    {{>breadcrumb}}
+
+    {{!-- <section class="mx-3 my-1">
+      <ol class="breadcrumb">
+        {{#each breadcrumb}}
+        {{#if url}}
+        <li class="breadcrumb-item">
+          <a href={{url}}>{{name}}</a>
+        </li>
+        {{else}}
+        <li class="breadcrumb-item">
+          {{name}}
+        </li>
+        {{/if}}
+        {{/each}}
+      </ol>
+    </section> --}}
+
+    <section class="mx-3 my-1">
+      {{#with newsData}}
+      <div class="card">
+        <img class="p-1" src={{photo}}>
+        <div class="card-body">
+          {{#with head}}
+          <div class="card-title">
+            <p class="display-4"><b>{{heading}}</b></p>
+            <p>{{description}}</p>
+          </div>
+          {{/with}}
+          <div class="card-body">
+            {{#each body}}
+            <p class="display-6">{{title}}</p>
+            <p>{{text}}</p>
+            {{/each}}
+          </div>
+        </div>
+      </div>
+      {{/with}}
+      <hr>
+    </section>
+
+    <section class="mx-3 my-1">
+      {{#with newsOtherBlock}}
+      <p class="display-6 text-center"><b>{{title}}</b></p>
+      {{>shoppost}}
+      {{!-- <div class="row">
+        {{#each cards}}
+        <div class="col-3">
+          <div class="card text-bg-dark">
+            <div class="card-title m-1">
+              <b>{{title}}</b>
+              {{#if isTop}}
+              <div class="badge text-bg-danger">Top</div>
+              {{/if}}
+              {{#if idNew}}
+              <div class="badge text-bg-success">New</div>
+              {{/if}}
+            </div>
+            <div class="card-body">
+              {{description}}
+            </div>
+          </div>
+        </div>
+        {{/each}}
+      </div> --}}
+      {{/with}}
+      <hr>
+    </section>
+
+    {{>shopaction}}
+  </main>
+</div>
