@@ -1,0 +1,15 @@
+<section class="mx-3 my-1">
+    <ol class="breadcrumb">
+        {{#each breadcrumb}}
+        {{#if url}}
+        <li class="breadcrumb-item">
+            <a href={{url}}>{{name}}</a>
+        </li>
+        {{else}}
+        <li class="breadcrumb-item">
+            {{name}}
+        </li>
+        {{/if}}
+        {{/each}}
+    </ol>
+</section>

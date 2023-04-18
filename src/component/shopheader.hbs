@@ -1,0 +1,28 @@
+<header>
+  <section class="mx-3 my-1">
+    <div class="card">
+      <div class="row">
+        <div class="col-2">
+          <img src="https://picsum.photos/200/73">
+        </div>
+        <div class="col-5"></div>
+        <div class="col-5">
+          <div class="card-body">
+            <div class="nav">
+              {{#with navigation}}
+              {{#each links}}
+              <div class="nav-item">
+                <a class="nav-link" href={{href}}>{{text}}</a>
+              </div>
+              {{/each}}
+              {{/with}}
+              <div class="nav-item">
+                <a class="nav-link disabled" href="#">Disabled</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</header>

@@ -1,0 +1,18 @@
+<footer>
+  <section>
+    <div class="row">
+      {{#each footer}}
+      <div class="col-2">
+        <a class="btn btn-link" href={{[0].link}}>{{[0].text}}</a>
+        <br>
+        <a class="btn btn-link" href={{[1].link}}>{{[1].text}}</a>
+        <br>
+        <a class="btn btn-link" href={{[2].link}}>{{[2].text}}</a>
+        <br>
+        <a class="btn btn-link disabled" href={{[3].link}}>{{[3].text}}</a>
+        <br>
+      </div>
+      {{/each}}
+    </div>
+  </section>
+</footer>
