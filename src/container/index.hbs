@@ -1,11 +1,27 @@
-{{!-- 
-Це код container файлу для index сторінки, 
-в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/"
- --}}
+<div>
+    <main>
 
-<h1>Hello world</h1>
-
-{{!-- 
-    Цей код містить лише те, що буде виводитись в <body>
-    Адже наш layout/default.hbs має вже структуру HTML
---}}
+        <section class="mx-3">
+            <ol>
+                {{#each page}}
+                <li>
+                    <div class="card m-1">
+                        <div class=" card-body">
+                            <div class="row">
+                                <div class="col-3">
+                                    <a class="btn btn-primary my-2" href={{link}} target="_blank"> Page {{name}} </a>
+                                </div>
+                                <div class="col-9">
+                                    Урок: "{{title}}"
+                                    <br>
+                                    {{description}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                {{/each}}
+            </ol>
+        </section>
+    </main>
+</div>
